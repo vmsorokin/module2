@@ -16,5 +16,5 @@ for i in numbers[1:len(numbers)]:
     if is_prime == True:
         primes.append(i)
     else: not_primes.append(i)
-print('Простые', primes)
+print('Простые', primes)#добовляет значение в список в зависимости от фоага
 print('Составные', not_primes)
