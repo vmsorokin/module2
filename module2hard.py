@@ -1,23 +1,19 @@
-n = 11
-n1 = int(n//2)
-vs1_ = list(range(1, n1))
-vs_ = list(range(1, n))
-o = []
-for i in vs1_:
-    for j in vs_:
-        if i == j:
-            continue
-        else:
-            sum_ = i + j
-            if n % sum_ == 0:
-                o1 = f'{i}{j}'
-                o.append(o1)
-            else:
+n = int(input('Введите число с первой вставки (от 3 до 20) '))
+if n < 3 or n>20:
+    print('Вас настигли шипы, вы не умеете читать...')
+else:
+    lst = []
+    for i in range(1, n):
+        for j in range(1, n):
+            if i == j:
                 continue
+            else:
+                sum_ = i + j
+                if n % sum_ == 0 and i<j:
+                    lst1 = f'{i}{j}'
+                    lst.append(lst1)
+                else:
+                    continue
+    print('Ваш пароль', ''.join(lst))
 
-print(o)
 
-# n = int(input('Введите число с первой вставки (от 3 до 20) '))
-# if n < 3 or n>20:
-#     print('Вас настигли шипы, вы не умеете читать...')
-# else:
