@@ -1,10 +1,10 @@
 n = int(input('Введите число с первой вставки (от 3 до 20) '))
-if n < 3 or n>20:
+if n <= 3 or n>=20:
     print('Вас настигли шипы, вы не умеете читать...')
 else:
     lst = []
-    for i in range(1, n):
-        for j in range(1, n):
+    for i in range(1, n+1):
+        for j in range(1, n+1):
             if i == j:
                 continue
             else:
